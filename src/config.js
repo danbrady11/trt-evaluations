@@ -1,23 +1,27 @@
 // ─── Edit these to match your program ───────────────────────────────────────
-
 export const TRAINING_TYPES = [
-  'CNG in Phoenix',
-  'Sector Responsibilities',
-  'City of Mesa Gas',
-  ];
+  'Rope Rescue — Low Angle',
+  'Rope Rescue — High Angle',
+  'Confined Space Rescue',
+  'Trench Rescue',
+  'Structural Collapse',
+  'Vehicle & Machinery Rescue',
+  'Water Rescue',
+  'Tabletop / ICS Exercise',
+  'Multi-Discipline Drill',
+];
 
 export const ROLES = [
   'Firefighter',
   'Engineer',
   'Company Officer',
   'Battalion Chief',
-  'Non-tech',
-  'Industry Partner',
+  'TRT Technician',
+  'TRT Specialist',
+  'Non-tech / Observer',
 ];
 
 // ─── Eval questions ──────────────────────────────────────────────────────────
-// These map to q1–q5 in the sheet. Keep labels short — they become column headers.
-
 export const QUESTIONS = [
   {
     id: 'q1',
@@ -26,7 +30,7 @@ export const QUESTIONS = [
   },
   {
     id: 'q2',
-    label: 'Content was relevant to real-world hazmat operations.',
+    label: 'Content was relevant to real-world rescue operations.',
     short: 'Operational relevance',
   },
   {
@@ -36,7 +40,7 @@ export const QUESTIONS = [
   },
   {
     id: 'q4',
-    label: 'I feel better prepared after this training.',
+    label: 'I feel better prepared to execute rescue operations after this training.',
     short: 'Preparedness gain',
   },
   {
@@ -55,5 +59,4 @@ export const SCALE_LABELS = {
 };
 
 // ─── Admin ───────────────────────────────────────────────────────────────────
-// Change this before deploying
-export const ADMIN_PASSWORD = 'hazmat2024';
+export const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD || 'trt2024';
